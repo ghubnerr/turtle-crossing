@@ -1,36 +1,24 @@
-# Pong Game with Python Turtle Module
+# Crossy Road with Turtle Graphics
+![capture](capture.png)
 
-## The Games
+## The Game
+This code uses various instances of the Turtle class to create different objects. The [`player.py`](player.py) class is the main turtle, whose commands are listened by the `Screen()` object, waiting for key strokes of "Up","Down","Left" and "Right" to move the turtle a fixed step in the given direction.
 
-The code uses Object-Oriented Programming and Class Inheritance to create instances of the Turtle class that are treated accordingly to their roles. `ball.py` will have a speed increasing over time depending on the number of bounces that it makes. Its direction is defined by multiplying factors of -1 and 1 to its x, y coordinate assignments, which will reverse depending on the direction of the collision.
-
-`scoreboard.py` is also an instance of a Turtle class, that keeps count of the points by each colored player.
-
-Finally, the instances of `paddle.py` are stretched-out turtle objects created specifically for collision detection with the ball using the *`ball.distance(<object>)`* property with addition to a buffer to ensure that it detects a collision for all the length of the paddle.
-
-### `2-paddles.py`
-
-This version is the original version of the Pong game, where there are only two paddles and the ball has to make it through one of them to score a point.
-
-### `4-paddles.py`
-
-This is a more dynamic version of the game, preferrably played by two people, one controlling the `W, A, S, D` keys for the blue player, and the other controlling the `Up, Down, Left, Right` keys for the red player.
-Here, there are no wall bounces, and a point is scored from any sides of the screen. 
-
+[`car_manager.py`](car_manager.py) holds instances of car objects that are generated inside the road gaps every 7 ticks so long the game is running. They are moved a set pace, until there is an increment in their velocity after the turtle reaches the finish line. The score is held by the [`scoreboard.py`](scoreboard.py) class, which in turn is another instance of the Turtle class, responsible for keeping track of the score on the screen, as well as writing "GAME OVER" once the game finishes.
 
 ## Installation on Local Machine
 
 1. Clone the repository:
 
-   `shell$ git clone https://github.com/ghubnerr/pong-game`
+   `shell$ git clone https://github.com/ghubnerr/turtle-crossing`
 
 2. Navigate to the project directory:
 
-   `cd pong-game`
+   `cd turtle-crossing`
 
-3. Run one of the games:
+3. Run the code:
    
-   `python 2-paddles.py`, or `python 4-paddles.py`
+   `python turtle-crossing`
 
 Alternatively, download the `.zip` file and execute step 3 at the desired directory.
 
